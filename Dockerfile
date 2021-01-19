@@ -43,13 +43,14 @@ RUN chmod +x /opt/google/chrome/google-chrome
 ENV PYTHONPATH /src/lib
 ENV DISPLAY 99
 
+WORKDIR /src
+
 COPY . /src
 
 RUN apt-get update \
     && apt-get install -y zlib1g-dev xvfb \
     && pip3 install -r /src/requirements.txt
 
-WORKDIR /src
 
 COPY docker/entrypoint.sh /
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]

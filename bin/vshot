@@ -103,7 +103,6 @@ if __name__ == "__main__":
             logger.info(
                 f"📌 [{name}] {shot.replace(os.path.expanduser('~'), '~', 1)} has been stored"
             )
-        else:
-            logger.info(f"📌 No shots taken...")
+
     finally:
         engine.teardown()
