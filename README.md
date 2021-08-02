@@ -13,7 +13,7 @@
 
 * Make an alis to this `docker run` command:
 ```
-alias vshot="docker run -it --rm -v ~/.vshot:/root/.vshot lowess/vshot $@"
+alias vshot="docker run -it --rm -v /dev/shm:/dev/shm -v ~/.vshot:/root/.vshot lowess/vshot $@"
 ```
 
 * Use it !
