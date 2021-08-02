@@ -14,7 +14,6 @@ from vshot.screenshot import above_the_fold_screenshot, fullpage_screenshot
 from vshot.storage import AwsUtils
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
 
 class VShot:
